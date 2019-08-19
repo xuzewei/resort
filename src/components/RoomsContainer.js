@@ -5,7 +5,8 @@ import RoomsFilter from './RoomsFilter'
 import RoomsList from './RoomsList'
 
 function RoomsContainer({ context }) {
-  const { loading, SortedRooms, rooms } = context;
+  const { loading, sortedRooms, rooms } = context;
+  
   if (loading) {
     return <Loading />
   }
@@ -13,7 +14,7 @@ function RoomsContainer({ context }) {
   return (
     <>
       <RoomsFilter rooms={rooms} />
-      {/* <RoomsList rooms={SortedRooms} />   */}
+      <RoomsList rooms={sortedRooms} />  
     </>
   )
 }
